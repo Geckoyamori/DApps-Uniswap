@@ -18,6 +18,8 @@ contract ERC20 {
         symbol = _symbol;
         totalSupply = _totalSupply;
         balances[msg.sender] = totalSupply;
+        // address(0) is used for "from" when a new token is minted
+        emit Transfer(address(0), msg.sender, totalSupply);
     }
 
     // Returns the amount of tokens owned by _owner.
