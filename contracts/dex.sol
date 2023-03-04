@@ -32,9 +32,9 @@ contract Dex {
     }
 
     // function to buy token(ERC20)
-    // _tokenAddr: token(ERC20) address to be received
+    // _tokenAddr: token(ERC20) address to to buy
     // _cost: fund(ETH) to be paid
-    // _amount: token(ERC20) to be received
+    // _amount: token(ERC20) to buy
     function buyToken(address _tokenAddr, uint256 _cost, uint256 _amount) external payable supportsToken(_tokenAddr) {
         ERC20 token = ERC20(_tokenAddr);
         require(msg.value == _cost, "Insufficient fund");
