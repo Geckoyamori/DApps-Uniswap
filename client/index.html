@@ -9,6 +9,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="../node_modules/web3/dist/web3.min.js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -21,19 +22,14 @@
       crossorigin="anonymous"
     ></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Arvo&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/style.css" />
   </head>
   <body>
     <header>
       <h1>Block Swap</h1>
       <div id="user-profile">
-        <button type="button" class="btn btn-warning btn-lg login">
-          Connect Wallet
-        </button>
+        <button type="button" class="btn btn-warning btn-lg login">Connect Wallet</button>
       </div>
     </header>
 
@@ -46,7 +42,7 @@
             id="input"
             aria-describedby="eth-addon"
             placeholder="0.00"
-            autoComplete="off"
+            autocomplete="off"
             autoCorrect="off"
             required
           />
@@ -73,35 +69,29 @@
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Select <br> Token
+            Select <br />
+            Token
           </button>
           <ul class="dropdown-menu w-30">
             <li>
-              <a class="dropdown-item"
-                ><img src="assets/images/comp.png" />&nbsp;&nbsp;COMP</a
-              >
+              <a class="dropdown-item"><img src="assets/images/comp.png" />&nbsp;&nbsp;COMP</a>
             </li>
             <li>
-              <a class="dropdown-item"
-                ><img src="assets/images/link.png" />&nbsp;&nbsp;LINK</a
-              >
+              <a class="dropdown-item"><img src="assets/images/link.png" />&nbsp;&nbsp;LINK</a>
             </li>
             <li>
-              <a class="dropdown-item"
-                ><img src="assets/images/dai.png" />&nbsp;&nbsp;DAI</a
-              >
+              <a class="dropdown-item"><img src="assets/images/dai.png" />&nbsp;&nbsp;DAI</a>
             </li>
           </ul>
         </div>
         <div id="rate-box">
           <span class="rate text">Exchange Rate</span>
           <span class="rate value">
-            1 <span id="top-text">ETH</span> = <span id="rate-value">3000</span><span id="bottom-text"> DAI</span>
+            1 <span id="top-text">ETH</span> = <span id="rate-value">3000</span
+            ><span id="bottom-text"> DAI</span>
           </span>
         </div>
-        <button type="submit" class="btn btn-primary swap disabled">
-          Connect Wallet
-        </button>
+        <button type="submit" class="btn btn-primary swap disabled">Connect Wallet</button>
       </form>
     </div>
 
